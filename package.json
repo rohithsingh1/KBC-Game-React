@@ -1,0 +1,25 @@
+{
+  "name": "quiz-application",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "engines": {
+    "node": "16.17.0",
+    "npm": "8.15.0"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "server": "node  index.js",
+    "quiz": "npm start --prefix quiz",
+    "quiz-install": "npm install --prefix quiz",
+    "dev": "concurrently \"npm run server\" \"npm run quiz\"",
+    "render-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix quiz && npm run build --prefix quiz"
+  },
+  "author": "rohith singh",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2"
+  }
+}
